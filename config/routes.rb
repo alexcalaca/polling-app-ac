@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :questions
-  resources :polls
+  
+  resources :polls do
+    resources :questions
+  end 
+  
   root 'polls#index'
 end
